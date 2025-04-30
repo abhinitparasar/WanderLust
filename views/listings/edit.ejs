@@ -1,0 +1,54 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <br><br>
+    <h3>Enter Details</h3>
+    <br/>
+    <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" novalidate class="needs-validation">
+        <div>
+            <label for="Title" class="form-label"><b>Title</b></label>
+            <input class="form-control" id="Title" name="listing[title]" type="text" value="<%= listing.title %>" required/>
+            <div class="invalid-feedback">Please enter a Title</div>
+            <br/>
+        </div>
+<div>
+    <label for="Description" class="form-label"><b>Description</b></label>      
+    <textarea class="form-control" id="Description" name="listing[description]" required><%= listing.description %></textarea>
+    <div class="invalid-feedback">Please enter a short description</div>
+    <br/>
+</div>
+<div>
+    <label for="Image" class="form-label"><b>Image</b></label>
+    <input class="form-control" id="Image" name="listing[image][url]" type="text" value="<%= listing.image.url %>" required/>
+    <div class="invalid-feedback">Please enter a valid Url</div>
+    <br/>
+</div>
+<div class="row">
+<div class="col-md-4">
+    <label for="Price" class="form-label"><b>Price</b></label>
+    <input class="form-control" id="Price" name="listing[price]" type="number" value="<%= listing.price %>" required/>
+    <div class="invalid-feedback">Please enter a valid price</div>
+    <br/>
+</div>
+<div class="col-md-8">
+    <label for="Country" class="form-label"><b>Country</b></label>
+    <input class="form-control" id="Country" name="listing[country]" type="text" value="<%= listing.country %>" required/>
+    <div class="invalid-feedback">Please enter a valid country</div>
+    <br/>
+</div>
+</div>
+<div>
+    <label for="Location" class="form-label"><b>Location</b></label>
+    <input class="form-control" id="Location" name="listing[location]" type="text" value="<%= listing.location %>" required/> 
+    <div class="invalid-feedback">Please enter a valid location</div>
+    <br/>
+</div>
+<button class="btn btn-dark add-btn"><b>Edit</b></button> 
+<br/><br/>     
+    </form>
+        </div>
+    </div>
+
+<script src="/js/script.js"></script>
+</body>

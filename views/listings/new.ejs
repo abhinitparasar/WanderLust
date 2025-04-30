@@ -1,0 +1,51 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+    <div class="row">
+    <div class="col-8 offset-2">
+    <br/><br/>
+    <h1>Enter Details</h1>
+    <br/>
+    <form method="POST" action="/listings" novalidate class="needs-validation">
+<div>
+    <label for="Title"  class="form-label"><b>Title</b></label>
+    <input id="Title" class="form-control" name="listing[title]" type="text" placeholder="enter title" required/>
+    <div class="invalid-feedback">Please enter a valid Title</div>
+    <br/>
+</div>
+<div>
+    <label for="Description"  class="form-label">Description</label>       
+<textarea id="Description" class="form-control" name="listing[description]" type="text" placeholder="description" required></textarea>
+<div class="invalid-feedback">Please enter a short description</div>
+<br/>
+</div>
+<div>
+    <label for="Image"  class="form-label">Image Url</label>
+<input id="Image" class="form-control" name="listing[image][url]" type="text" placeholder="image" />
+<br/>
+</div>
+<div class="row">
+<div class="col-md-4"> 
+    <label for="Price"  class="form-label">Price</label>
+<input id="Price" class="form-control" name="listing[price]" type="number" placeholder="price" required/>
+<div class="invalid-feedback">Please enter a valid price</div>
+<br/>
+</div>
+<div class="col-md-8">
+    <label for="Country"  class="form-label">Country</label>
+<input id="Country" class="form-control" name="listing[country]" type="text" placeholder="country" required/>
+<div class="invalid-feedback">Please enter a valid country</div>
+<br/>
+</div>
+</div>
+<div>
+    <label for="Location"  class="form-label">Location</label>
+    <input class="form-control" id="Location" name="listing[location]" type="text" placeholder="location" required/> 
+    <div class="invalid-feedback">Please enter a valid location</div>
+    <br/>  
+</div>
+<button class="btn btn-dark add-btn">Add</button> 
+<br/><br/>
+</div> 
+</div> 
+<script src="/js/script.js"></script>  
+</body>
