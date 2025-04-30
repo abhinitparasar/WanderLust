@@ -33,7 +33,7 @@ WanderLust is a web application for managing and exploring travel listings. User
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd Project
+   cd WanderLust
    
 2. Install dependencies:
     ```bash
